@@ -6,8 +6,9 @@ import type {
   HeaderQuery,
 } from 'storefrontapi.generated';
 import {Aside} from '~/components/Aside';
-import {Footer} from '~/components/Footer';
-import {Header, HeaderMenu} from '~/components/Header';
+import {Header, HeaderMenu} from '~/components/Layout/Header';
+import {Footer} from '~/components/Layout/Footer';
+import {MobileBottomNav} from '~/components/Layout/MobileBottomNav';
 import {CartMain} from '~/components/CartMain';
 import {
   SEARCH_ENDPOINT,
@@ -51,6 +52,8 @@ export function PageLayout({
         header={header}
         publicStoreDomain={publicStoreDomain}
       />
+      {/* Mobile Bottom Navigation - Thumb Zone Optimized */}
+      <MobileBottomNav cart={cart} />
     </Aside.Provider>
   );
 }
